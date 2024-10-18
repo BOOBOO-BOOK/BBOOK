@@ -59,8 +59,5 @@ public class AdminController {
 		System.out.println(seq);
 		System.out.println(replyContent);
 		adminService.qnaReplyWrite(seq, replyContent);
-	}
-	
-	
-	
+	}	
 }

@@ -39,7 +39,7 @@ public class BookController {
 	}
 	
 	@RequestMapping(value="/bookboard/bookList", method=RequestMethod.GET)
-	public String bookList(@RequestParam(required = false, defaultValue="1") String pg, Model model) {
+	public String bookList(@RequestParam(required = false, defaultValue="1") String pg, Model model, HttpSession session) {
 		Map<String, Object> map2 = bookService.getBookList(pg);
 		
 		map2.put("pg", pg);
@@ -102,5 +102,4 @@ public class BookController {
         }
 		
 	}
-	
 }
